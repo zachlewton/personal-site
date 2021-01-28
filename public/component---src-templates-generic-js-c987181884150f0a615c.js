@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[3],{"6Qy7":function(e,n,t){"use strict";t.r(n);var a=t("q1tI"),l=t.n(a);n.default=function(e){var n=e.pageContext;return l.a.createElement("div",null,l.a.createElement("h1",null,n.title),l.a.createElement("p",null,n.description))}}}]);
+//# sourceMappingURL=component---src-templates-generic-js-c987181884150f0a615c.js.map
