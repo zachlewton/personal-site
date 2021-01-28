@@ -1,7 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 
-function Markdown({ data }) {
+const Markdown = ({ data }) => {
 	const { markdownRemark } = data;
 
 	return (
@@ -11,7 +11,7 @@ function Markdown({ data }) {
 			<div dangerouslySetInnerHTML={{ __html: markdownRemark.html }} />
 		</div>
 	);
-}
+};
 
 export const pageQuery = graphql`
 	query($slug: String!) {
