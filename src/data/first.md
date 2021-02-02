@@ -1,7 +1,6 @@
 ---
 title: would you look at that
 description: would you just look at it
-slug: /first-markdown
 ---
 
 ![the alt text](../images/snowImage.jpg)

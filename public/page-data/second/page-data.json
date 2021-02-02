@@ -1,1 +1,1 @@
-{"componentChunkName":"component---src-templates-generic-js","path":"/second","result":{"pageContext":{"title":"second page","description":"i am the second page"}},"staticQueryHashes":[]}
+{"componentChunkName":"component---src-templates-markdown-js","path":"/second/","result":{"data":{"markdownRemark":{"html":"<h1>second page</h1>\n<p>this is the second page</p>","frontmatter":{"description":"this is the second page","title":"second page"}}},"pageContext":{"slug":"/second/"}},"staticQueryHashes":[]}
