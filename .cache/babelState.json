@@ -21,6 +21,16 @@
       ],
       "presets": [
         {
+          "name": "C:\\Users\\zachg\\Code\\personal-site\\node_modules\\@emotion\\babel-preset-css-prop\\dist\\emotion-babel-preset-css-prop.cjs.js",
+          "options": {
+            "sourceMap": true,
+            "autoLabel": "dev-only",
+            "plugins": [],
+            "labelFormat": "[local]",
+            "cssPropOptimization": true
+          }
+        },
+        {
           "name": "C:\\Users\\zachg\\Code\\personal-site\\node_modules\\@babel\\preset-typescript\\lib\\index.js",
           "options": {
             "plugins": [],
@@ -55,6 +65,16 @@
         }
       ],
       "presets": [
+        {
+          "name": "C:\\Users\\zachg\\Code\\personal-site\\node_modules\\@emotion\\babel-preset-css-prop\\dist\\emotion-babel-preset-css-prop.cjs.js",
+          "options": {
+            "sourceMap": true,
+            "autoLabel": "dev-only",
+            "plugins": [],
+            "labelFormat": "[local]",
+            "cssPropOptimization": true
+          }
+        },
         {
           "name": "C:\\Users\\zachg\\Code\\personal-site\\node_modules\\@babel\\preset-typescript\\lib\\index.js",
           "options": {
@@ -91,6 +111,16 @@
       ],
       "presets": [
         {
+          "name": "C:\\Users\\zachg\\Code\\personal-site\\node_modules\\@emotion\\babel-preset-css-prop\\dist\\emotion-babel-preset-css-prop.cjs.js",
+          "options": {
+            "sourceMap": true,
+            "autoLabel": "dev-only",
+            "plugins": [],
+            "labelFormat": "[local]",
+            "cssPropOptimization": true
+          }
+        },
+        {
           "name": "C:\\Users\\zachg\\Code\\personal-site\\node_modules\\@babel\\preset-typescript\\lib\\index.js",
           "options": {
             "plugins": [],
@@ -125,6 +155,16 @@
         }
       ],
       "presets": [
+        {
+          "name": "C:\\Users\\zachg\\Code\\personal-site\\node_modules\\@emotion\\babel-preset-css-prop\\dist\\emotion-babel-preset-css-prop.cjs.js",
+          "options": {
+            "sourceMap": true,
+            "autoLabel": "dev-only",
+            "plugins": [],
+            "labelFormat": "[local]",
+            "cssPropOptimization": true
+          }
+        },
         {
           "name": "C:\\Users\\zachg\\Code\\personal-site\\node_modules\\@babel\\preset-typescript\\lib\\index.js",
           "options": {
