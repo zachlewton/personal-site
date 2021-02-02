@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[6],{WZbX:function(e,t,n){"use strict";n.r(t);var a=n("q1tI"),r=n.n(a);n("9eSz");t.default=function(e){var t=e.data.markdownRemark;return r.a.createElement("div",null,r.a.createElement("h1",null,t.frontmatter.title),r.a.createElement("p",null,t.frontmatter.description),r.a.createElement("div",{dangerouslySetInnerHTML:{__html:t.html}}))}}}]);
-//# sourceMappingURL=component---src-templates-markdown-js-0d76f2b1aa8284cff38a.js.map

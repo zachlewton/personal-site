@@ -1,6 +1,7 @@
 ---
 title: would you look at that
 description: would you just look at it
+date: 2021-2-01
 ---
 
 ![the alt text](../images/snowImage.jpg)

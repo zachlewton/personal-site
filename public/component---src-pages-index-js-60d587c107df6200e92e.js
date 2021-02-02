@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[4],{RXBc:function(e,a,n){"use strict";n.r(a);var t=n("q1tI"),l=n.n(t),r=n("9eSz"),c=n.n(r);a.default=function(e){var a=e.data;return l.a.createElement("div",null,l.a.createElement("h1",null,"home page"),l.a.createElement(c.a,{fluid:a.file.childImageSharp.fluid,alt:"snow over a car"}))}}}]);
-//# sourceMappingURL=component---src-pages-index-js-60d587c107df6200e92e.js.map

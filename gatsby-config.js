@@ -1,4 +1,9 @@
 module.exports = {
+	siteMetadata: {
+		title: `Zach Lewton Web Dev`,
+		siteUrl: `https://nostalgic-mcclintock-9e28ff.netlify.app/`,
+		description: `Personal site for Zach Lewton`,
+	},
 	plugins: [
 		`gatsby-plugin-emotion`,
 		{
