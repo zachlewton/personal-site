@@ -1,10 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
+
 import styled from '@emotion/styled';
 
 const Layout = ({ children }) => {
+	// const [theme, toggleTheme] = useState('white');
+	const [theme, toggleTheme] = useState(true);
+
 	return (
-		<RootWrapper>
-			<Container>{children}</Container>
+		<RootWrapper theme={theme}>
+			<Container>
+				<button
+					// onClick={() =>
+					// 	theme === 'white' ? toggleTheme('red') : toggleTheme('white')
+					// }
+
+					onClick={() => toggleTheme(!theme)}
+				>
+					toggle theme
+				</button>
+				{children}
+			</Container>
 			<Footer />
 		</RootWrapper>
 	);
@@ -18,6 +33,8 @@ const RootWrapper = styled.div`
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh;
+	/* background: ${({ theme }) => theme}; */
+	background: ${({ theme }) => (theme ? 'var(--light)' : 'var(--dark)')};
 `;
 
 const Container = styled.div`
