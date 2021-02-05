@@ -7,9 +7,9 @@ public_folder: '/images'
 collections:
   - name: blog
     label: Blog
-    folder: data
+    folder: src/data
     create: true
     fields:
       - { name: date, label: Date, widget: datetime }
       - { name: title, label: Title }
-      - { name: body, label: Body, widget: markdown }
+      - { name: description, label: Description, widget: text }
