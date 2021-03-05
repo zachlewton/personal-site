@@ -1,4 +1,7 @@
 var plugins = [{
+      plugin: require('C:/Users/zachg/Code/personal-site/node_modules/gatsby-plugin-breakpoints/gatsby-ssr'),
+      options: {"plugins":[],"queries":{"xs":"(max-width: 950px)","sm":"(max-width: 1110px)","md":"(max-width: 1429px)","l":"(max-width: 300000000px)","portrait":"(orientation: portrait)"}},
+    },{
       plugin: require('C:/Users/zachg/Code/personal-site/node_modules/gatsby-plugin-manifest/gatsby-ssr'),
       options: {"plugins":[],"name":"Zach Lewton Web Development","short_name":"ZachLewtonDev","start_url":"/","background_color":"#5b3e29","theme_color":"#fdf5e6","display":"standalone","icon":"src/images/icon.png","crossOrigin":"use-credentials","legacy":true,"theme_color_in_head":true,"cache_busting_mode":"query","include_favicon":true,"cacheDigest":"1a77459096c37ffb6e5644e57e94d476"},
     },{

@@ -1,5 +1,5 @@
 const path = require('path');
-const data = require('./src/data/pageData');
+
 const { createFilePath } = require(`gatsby-source-filesystem`);
 
 exports.createPages = async ({ actions, graphql }) => {
@@ -16,29 +16,29 @@ exports.createPages = async ({ actions, graphql }) => {
 	// 	});
 	// });
 
-	const mdPages = await graphql(`
-		query MyQuery {
-			allMarkdownRemark {
-				edges {
-					node {
-						fields {
-							slug
-						}
-					}
-				}
-			}
-		}
-	`);
+	// const mdPages = await graphql(`
+	// 	query MyQuery {
+	// 		allMarkdownRemark {
+	// 			edges {
+	// 				node {
+	// 					fields {
+	// 						slug
+	// 					}
+	// 				}
+	// 			}
+	// 		}
+	// 	}
+	// `);
 
-	mdPages.data.allMarkdownRemark.edges.map(({ node }) => {
-		createPage({
-			path: node.fields.slug,
-			component: path.resolve('./src/templates/Markdown.js'),
-			context: {
-				slug: node.fields.slug,
-			},
-		});
-	});
+	// mdPages.data.allMarkdownRemark.edges.map(({ node }) => {
+	// 	createPage({
+	// 		path: node.fields.slug,
+	// 		component: path.resolve('./src/templates/Markdown.js'),
+	// 		context: {
+	// 			slug: node.fields.slug,
+	// 		},
+	// 	});
+	// });
 };
 
 exports.onCreateNode = ({ node, actions, getNode }) => {

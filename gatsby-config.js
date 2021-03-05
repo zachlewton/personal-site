@@ -1,3 +1,12 @@
+const myCustomQueries = {
+	xs: '(max-width: 950px)',
+	sm: '(max-width: 1110px)',
+	md: '(max-width: 1429px)',
+	l: '(max-width: 300000000px)',
+
+	portrait: '(orientation: portrait)',
+};
+
 module.exports = {
 	siteMetadata: {
 		title: `Zach Lewton Web Dev`,
@@ -6,12 +15,18 @@ module.exports = {
 	},
 	plugins: [
 		`gatsby-plugin-emotion`,
+		{
+			resolve: 'gatsby-plugin-breakpoints',
+			options: {
+				queries: myCustomQueries,
+			},
+		},
 		`gatsby-plugin-netlify-cms`,
 		{
 			resolve: `gatsby-source-filesystem`,
 			options: {
 				name: 'data',
-				path: `${__dirname}/data`,
+				path: `${__dirname}/src/data`,
 			},
 		},
 		{
@@ -35,9 +50,9 @@ module.exports = {
 				],
 			},
 		},
-		`gatsby-plugin-sass`,
 		`gatsby-plugin-sharp`,
 		`gatsby-transformer-sharp`,
+		`gatsby-plugin-sass`,
 		{
 			resolve: `gatsby-plugin-manifest`,
 			options: {

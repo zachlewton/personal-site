@@ -1,4 +1,7 @@
 module.exports = [{
+      plugin: require('../node_modules/gatsby-plugin-breakpoints/gatsby-browser.js'),
+      options: {"plugins":[],"queries":{"xs":"(max-width: 950px)","sm":"(max-width: 1110px)","md":"(max-width: 1429px)","l":"(max-width: 300000000px)","portrait":"(orientation: portrait)"}},
+    },{
       plugin: require('../node_modules/gatsby-plugin-netlify-cms/gatsby-browser.js'),
       options: {"plugins":[]},
     },{
