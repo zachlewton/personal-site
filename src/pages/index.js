@@ -4,8 +4,7 @@ import PostCard from '../components/PostCard';
 import Layout from '../components/Layout';
 import styled from '@emotion/styled';
 
-const index = ({ data }) => {
-	console.log(data);
+const index = ({ data }, props) => {
 	return (
 		<Layout>
 			<h1>

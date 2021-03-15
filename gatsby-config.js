@@ -14,6 +14,13 @@ module.exports = {
 		description: `Personal site for Zach Lewton`,
 	},
 	plugins: [
+		{
+			resolve: `gatsby-source-filesystem`,
+			options: {
+				name: 'uploads',
+				path: `${__dirname}/static/images`,
+			},
+		},
 		`gatsby-plugin-emotion`,
 		{
 			resolve: 'gatsby-plugin-breakpoints',
@@ -29,14 +36,22 @@ module.exports = {
 				path: `${__dirname}/src/data`,
 			},
 		},
+		// {
+		// 	resolve: `gatsby-source-filesystem`,
+		// 	options: {
+		// 		name: 'images',
+		// 		path: `${__dirname}/src/images`,
+		// 	},
+		// },
 		{
-			resolve: `gatsby-source-filesystem`,
+			resolve: `gatsby-transformer-sharp`,
 			options: {
-				name: 'images',
-				path: `${__dirname}/src/images`,
+				// The option defaults to true
+				checkSupportedExtensions: false,
 			},
 		},
 
+		`gatsby-plugin-sharp`,
 		{
 			resolve: `gatsby-transformer-remark`,
 			options: {
@@ -47,11 +62,17 @@ module.exports = {
 							maxWidth: 5000,
 						},
 					},
+					{
+						resolve: `gatsby-plugin-netlify-cms-paths`,
+						options: {
+							// Path to your Netlify CMS config file
+							cmsConfig: `/static/admin/config.yml`,
+						},
+					},
 				],
 			},
 		},
-		`gatsby-plugin-sharp`,
-		`gatsby-transformer-sharp`,
+		`gatsby-plugin-netlify-cms`,
 		`gatsby-plugin-sass`,
 		{
 			resolve: `gatsby-plugin-manifest`,

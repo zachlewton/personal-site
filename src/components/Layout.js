@@ -1,29 +1,46 @@
 import React, { useState } from 'react';
 import { useBreakpoint } from 'gatsby-plugin-breakpoints';
-
+import { Link } from 'gatsby';
 import { ModeNight } from '@styled-icons/material';
 import { LightUp } from '@styled-icons/entypo/LightUp';
+import { useLocation } from '@reach/router';
 
 import styled from '@emotion/styled';
 
 const Layout = ({ children }) => {
 	// const [theme, toggleTheme] = useState('white');
-	const [theme, toggleTheme] = useState(true);
 	const breakpoints = useBreakpoint();
+
+	const location = useLocation();
+	console.log(location);
+	const [theme, toggleTheme] = useState(true);
 
 	return (
 		<RootWrapper theme={theme}>
 			<Container>
-				{!breakpoints.xs && (
-					<nav>
-						<ul>
-							<li>web dev </li>
-							<a href="https://netnetnet.bandcamp.com/" target="_blank">
-								<li>music</li>
-							</a>
-						</ul>
-					</nav>
-				)}
+				<nav>
+					<ul
+						style={
+							breakpoints.xs
+								? { justifyContent: 'flex-start' }
+								: { justifyContent: 'flex-end' }
+						}
+					>
+						{location.pathname == '/' ? (
+							<Link to="/work">
+								<li>web dev </li>
+							</Link>
+						) : (
+							<Link to="/">
+								<li>home </li>
+							</Link>
+						)}
+
+						<a href="https://netnetnet.bandcamp.com/" target="_blank">
+							<li>music</li>
+						</a>
+					</ul>
+				</nav>
 
 				{children}
 			</Container>
@@ -53,8 +70,6 @@ const RootWrapper = styled.div`
 
 	background: ${({ theme }) => (theme ? 'var(--light)' : 'var(--dark)')};
 	padding: 0 0 3px 0;
-	/* ${({ theme }) => theme && `color: var(--textLight)`}
-	${({ theme }) => !theme && `color: var(--textDark)`} */
 
 	color: ${({ theme }) => (theme ? 'var(--textLight)' : 'var(--textDark)')};
 
@@ -76,12 +91,18 @@ const RootWrapper = styled.div`
 
 const LightButton = styled(LightUp)`
 	align-self: flex-end;
-	padding-right: 1vw;
+	padding-left: 1vw;
+	position: fixed;
+	left: 0;
+	top: 0;
 `;
 
 const NightButton = styled(ModeNight)`
 	align-self: flex-end;
-	padding-right: 1vw;
+	padding-left: 1vw;
+	position: fixed;
+	left: 0;
+	top: 0;
 `;
 
 const Container = styled.div`
@@ -98,18 +119,28 @@ const Container = styled.div`
 		font-size: 10rem;
 		text-transform: lowercase;
 		letter-spacing: 0.1ch;
-		color: saddlebrown;
+		color: #274c77;
 		margin: 0;
 		line-height: 9rem;
+	}
+
+	h2 {
+		font-size: 4rem;
+		text-transform: lowercase;
+		letter-spacing: 0.1ch;
+		color: #274c77;
+		margin: 0;
+		/* line-height: 9rem; */
 	}
 
 	nav {
 		width: 100%;
 		height: 130px;
+		padding: 0 0 0 0;
 
 		ul {
 			display: flex;
-			justify-content: flex-end;
+
 			li {
 				list-style: none;
 				padding: 0 0 0 50px;
