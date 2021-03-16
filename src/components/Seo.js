@@ -7,11 +7,10 @@ export const Seo = ({ description, keywords, title, image, url, author }) => {
 		<StaticQuery
 			query={detailsQuery}
 			render={(data) => {
-				const metaDescription =
-					description || data.site.siteMetadata.description;
-				const metaTitle = title || data.site.siteMetadata.title;
-				const metaAuthor = author || data.site.siteMetadata.author;
-				const metaImage = image || data.site.siteMetadate.image;
+				const metaDescription = description;
+				const metaTitle = title;
+				const metaAuthor = author;
+				const metaImage = image;
 				const metaKeywords = keywords || [
 					'zach lewton',
 					'web developer',
