@@ -4,7 +4,7 @@ import { Link } from 'gatsby';
 import { ModeNight } from '@styled-icons/material';
 import { LightUp } from '@styled-icons/entypo/LightUp';
 import { useLocation } from '@reach/router';
-
+import Seo from './Seo';
 import styled from '@emotion/styled';
 
 const Layout = ({ children }) => {
@@ -17,6 +17,7 @@ const Layout = ({ children }) => {
 
 	return (
 		<RootWrapper theme={theme}>
+			<Seo />
 			<Container>
 				<nav>
 					<ul

@@ -10,8 +10,10 @@ const myCustomQueries = {
 module.exports = {
 	siteMetadata: {
 		title: `Zach Lewton Web Dev`,
-		siteUrl: `https://nostalgic-mcclintock-9e28ff.netlify.app/`,
-		description: `Personal site for Zach Lewton`,
+		url: `https://www.zachlewton.dev/`,
+		image: 'static/images/icon.png',
+		author: 'zach lewton',
+		description: `Website for Zach Lewton Web Development services and music`,
 	},
 	plugins: [
 		{
@@ -21,6 +23,7 @@ module.exports = {
 				path: `${__dirname}/static/images`,
 			},
 		},
+		`gatsby-plugin-react-helmet`,
 		`gatsby-plugin-emotion`,
 		{
 			resolve: 'gatsby-plugin-breakpoints',
@@ -85,8 +88,6 @@ module.exports = {
 				theme_color: `#fdf5e6`,
 				lang: `en`,
 				description: `Website for Zach Lewton Web Development services and music`,
-				// Enables "Add to Homescreen" prompt and disables browser UI (including back button)
-				// see https://developers.google.com/web/fundamentals/web-app-manifest/#display
 				display: `standalone`,
 				icon: `static/images/icon.png`, // This path is relative to the root of the site.
 				crossOrigin: `use-credentials`,

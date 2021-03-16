@@ -1,13 +1,13 @@
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
-		module.exports = factory(require("C:\\Users\\zachg\\Code\\personal-site\\node_modules\\@reach\\router\\index.js"), require("fs"), require("C:\\Users\\zachg\\Code\\personal-site\\node_modules\\lodash\\merge.js"), require("path"), require("react"), require("react-dom/server"));
+		module.exports = factory(require("C:\\Users\\zachg\\Code\\personal-site\\node_modules\\@reach\\router\\index.js"), require("fs"), require("C:\\Users\\zachg\\Code\\personal-site\\node_modules\\lodash\\merge.js"), require("path"), require("react"), require("react-dom/server"), require("react-helmet"));
 	else if(typeof define === 'function' && define.amd)
-		define("lib", ["C:\\Users\\zachg\\Code\\personal-site\\node_modules\\@reach\\router\\index.js", "fs", "C:\\Users\\zachg\\Code\\personal-site\\node_modules\\lodash\\merge.js", "path", "react", "react-dom/server"], factory);
+		define("lib", ["C:\\Users\\zachg\\Code\\personal-site\\node_modules\\@reach\\router\\index.js", "fs", "C:\\Users\\zachg\\Code\\personal-site\\node_modules\\lodash\\merge.js", "path", "react", "react-dom/server", "react-helmet"], factory);
 	else if(typeof exports === 'object')
-		exports["lib"] = factory(require("C:\\Users\\zachg\\Code\\personal-site\\node_modules\\@reach\\router\\index.js"), require("fs"), require("C:\\Users\\zachg\\Code\\personal-site\\node_modules\\lodash\\merge.js"), require("path"), require("react"), require("react-dom/server"));
+		exports["lib"] = factory(require("C:\\Users\\zachg\\Code\\personal-site\\node_modules\\@reach\\router\\index.js"), require("fs"), require("C:\\Users\\zachg\\Code\\personal-site\\node_modules\\lodash\\merge.js"), require("path"), require("react"), require("react-dom/server"), require("react-helmet"));
 	else
-		root["lib"] = factory(root["C:\\Users\\zachg\\Code\\personal-site\\node_modules\\@reach\\router\\index.js"], root["fs"], root["C:\\Users\\zachg\\Code\\personal-site\\node_modules\\lodash\\merge.js"], root["path"], root["react"], root["react-dom/server"]);
-})(this, function(__WEBPACK_EXTERNAL_MODULE__reach_router__, __WEBPACK_EXTERNAL_MODULE_fs__, __WEBPACK_EXTERNAL_MODULE_lodash_merge__, __WEBPACK_EXTERNAL_MODULE_path__, __WEBPACK_EXTERNAL_MODULE_react__, __WEBPACK_EXTERNAL_MODULE_react_dom_server__) {
+		root["lib"] = factory(root["C:\\Users\\zachg\\Code\\personal-site\\node_modules\\@reach\\router\\index.js"], root["fs"], root["C:\\Users\\zachg\\Code\\personal-site\\node_modules\\lodash\\merge.js"], root["path"], root["react"], root["react-dom/server"], root["react-helmet"]);
+})(this, function(__WEBPACK_EXTERNAL_MODULE__reach_router__, __WEBPACK_EXTERNAL_MODULE_fs__, __WEBPACK_EXTERNAL_MODULE_lodash_merge__, __WEBPACK_EXTERNAL_MODULE_path__, __WEBPACK_EXTERNAL_MODULE_react__, __WEBPACK_EXTERNAL_MODULE_react_dom_server__, __WEBPACK_EXTERNAL_MODULE_react_helmet__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -104,6 +104,11 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ (function(module, exports, __webpack_require__) {
 
 var plugins = [{
+  plugin: __webpack_require__(/*! ./node_modules/gatsby-plugin-react-helmet/gatsby-ssr */ "./node_modules/gatsby-plugin-react-helmet/gatsby-ssr.js"),
+  options: {
+    "plugins": []
+  }
+}, {
   plugin: __webpack_require__(/*! ./node_modules/gatsby-plugin-breakpoints/gatsby-ssr */ "./node_modules/gatsby-plugin-breakpoints/gatsby-ssr.js"),
   options: {
     "plugins": [],
@@ -120,18 +125,21 @@ var plugins = [{
   options: {
     "plugins": [],
     "name": "Zach Lewton Web Development",
+    "title": "Zach Lewton Web Development",
     "short_name": "ZachLewtonDev",
     "start_url": "/",
     "background_color": "#5b3e29",
     "theme_color": "#fdf5e6",
+    "lang": "en",
+    "description": "Website for Zach Lewton Web Development services and music",
     "display": "standalone",
-    "icon": "src/images/icon.png",
+    "icon": "static/images/icon.png",
     "crossOrigin": "use-credentials",
-    "legacy": true,
-    "theme_color_in_head": true,
     "cache_busting_mode": "query",
     "include_favicon": true,
-    "cacheDigest": null
+    "legacy": true,
+    "theme_color_in_head": true,
+    "cacheDigest": "df404afb39f8f131ce8d25208535729f"
   }
 }, {
   plugin: __webpack_require__(/*! ./node_modules/gatsby-plugin-offline/gatsby-ssr */ "./node_modules/gatsby-plugin-offline/gatsby-ssr.js"),
@@ -6282,6 +6290,44 @@ var onRenderBody = function onRenderBody(_ref3) {
     httpEquiv: "refresh",
     content: "0;url=/.gatsby-plugin-offline:api=disableOfflineShell&redirect=true"
   }))]);
+};
+
+exports.onRenderBody = onRenderBody;
+
+/***/ }),
+
+/***/ "./node_modules/gatsby-plugin-react-helmet/gatsby-ssr.js":
+/*!***************************************************************!*\
+  !*** ./node_modules/gatsby-plugin-react-helmet/gatsby-ssr.js ***!
+  \***************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+exports.__esModule = true;
+exports.onRenderBody = void 0;
+
+var _reactHelmet = __webpack_require__(/*! react-helmet */ "react-helmet");
+
+var onRenderBody = function onRenderBody(_ref) {
+  var setHeadComponents = _ref.setHeadComponents,
+      setHtmlAttributes = _ref.setHtmlAttributes,
+      setBodyAttributes = _ref.setBodyAttributes;
+
+  var helmet = _reactHelmet.Helmet.renderStatic(); // These action functions were added partway through the Gatsby 1.x cycle.
+
+
+  if (setHtmlAttributes) {
+    setHtmlAttributes(helmet.htmlAttributes.toComponent());
+  }
+
+  if (setBodyAttributes) {
+    setBodyAttributes(helmet.bodyAttributes.toComponent());
+  }
+
+  setHeadComponents([helmet.title.toComponent(), helmet.link.toComponent(), helmet.meta.toComponent(), helmet.noscript.toComponent(), helmet.script.toComponent(), helmet.style.toComponent(), helmet.base.toComponent()]);
 };
 
 exports.onRenderBody = onRenderBody;
@@ -35715,6 +35761,17 @@ module.exports = __WEBPACK_EXTERNAL_MODULE_react__;
 /***/ (function(module, exports) {
 
 module.exports = __WEBPACK_EXTERNAL_MODULE_react_dom_server__;
+
+/***/ }),
+
+/***/ "react-helmet":
+/*!*******************************!*\
+  !*** external "react-helmet" ***!
+  \*******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = __WEBPACK_EXTERNAL_MODULE_react_helmet__;
 
 /***/ })
 
