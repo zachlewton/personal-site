@@ -33,6 +33,7 @@ const Layout = ({ children }) => {
 					name="keywords"
 					content="zach lewton, web development, web developer, react, react developer, frontend developer, frontend development"
 				/>
+				<meta http-equiv="content-language" content="en-us" />
 				<meta name="og:title" content={siteMetadata.title} />
 				<meta name="og:type" content="website" />
 				<meta name="og:description" content={siteMetadata.description} />
