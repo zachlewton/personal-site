@@ -78,10 +78,13 @@ module.exports = {
 			resolve: `gatsby-plugin-manifest`,
 			options: {
 				name: `Zach Lewton Web Development`,
+				title: `Zach Lewton Web Development`,
 				short_name: `ZachLewtonDev`,
 				start_url: `/`,
 				background_color: `#5b3e29`,
 				theme_color: `#fdf5e6`,
+				lang: `en`,
+				description: `Website for Zach Lewton Web Development services and music`,
 				// Enables "Add to Homescreen" prompt and disables browser UI (including back button)
 				// see https://developers.google.com/web/fundamentals/web-app-manifest/#display
 				display: `standalone`,
