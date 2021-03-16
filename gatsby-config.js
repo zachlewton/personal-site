@@ -16,6 +16,7 @@ module.exports = {
 		description: `Website for Zach Lewton Web Development services and music`,
 	},
 	plugins: [
+		`gatsby-plugin-react-helmet`,
 		{
 			resolve: `gatsby-source-filesystem`,
 			options: {
@@ -23,7 +24,7 @@ module.exports = {
 				path: `${__dirname}/static/images`,
 			},
 		},
-		`gatsby-plugin-react-helmet`,
+
 		`gatsby-plugin-emotion`,
 		{
 			resolve: 'gatsby-plugin-breakpoints',

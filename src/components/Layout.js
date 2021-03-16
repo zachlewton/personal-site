@@ -4,7 +4,7 @@ import { Link } from 'gatsby';
 import { ModeNight } from '@styled-icons/material';
 import { LightUp } from '@styled-icons/entypo/LightUp';
 import { useLocation } from '@reach/router';
-import Seo from './Seo';
+import Helmet from 'react-helmet';
 import styled from '@emotion/styled';
 
 const Layout = ({ children }) => {
@@ -15,9 +15,32 @@ const Layout = ({ children }) => {
 	console.log(location);
 	const [theme, toggleTheme] = useState(true);
 
+	const siteMetadata = {
+		title: `Zach Lewton Web Dev`,
+		url: `https://www.zachlewton.dev/`,
+		image: 'static/images/icon.png',
+		author: 'zach lewton',
+		description: `Website for Zach Lewton Web Development services and music`,
+	};
+
 	return (
 		<RootWrapper theme={theme}>
-			<Seo />
+			<Helmet>
+				<title>{siteMetadata.title}</title>
+				<meta name="description" content={siteMetadata.description} />
+
+				<meta
+					name="keywords"
+					content="zach lewton, web development, web developer, react, react developer, frontend developer, frontend development"
+				/>
+				<meta name="og:title" content={siteMetadata.title} />
+				<meta name="og:type" content="website" />
+				<meta name="og:description" content={siteMetadata.description} />
+				<meta name="og:image" content={siteMetadata.image} />
+				<meta name="og:locale" content="end_US" />
+				<meta name="og:url" content={siteMetadata.url} />
+				<link rel="canonical" content={siteMetadata.url} />
+			</Helmet>
 			<Container>
 				<nav>
 					<ul
