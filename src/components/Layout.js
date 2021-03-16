@@ -37,7 +37,7 @@ const Layout = ({ children }) => {
 				<meta name="og:type" content="website" />
 				<meta name="og:description" content={siteMetadata.description} />
 				<meta name="og:image" content={siteMetadata.image} />
-				<meta name="og:locale" content="en-US" />
+				<meta name="og:locale" content="en" />
 				<meta name="og:url" content={siteMetadata.url} />
 				<link rel="canonical" content={siteMetadata.url} />
 			</Helmet>
