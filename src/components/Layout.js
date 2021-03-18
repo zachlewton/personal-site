@@ -134,7 +134,7 @@ const Container = styled.div`
 	flex: 1;
 
 	margin: 0 auto;
-	padding: 0 20px 0 7.5vw;
+	padding: 0 20px 0 20px;
 	width: 100%;
 	/* max-width: 640px; */
 	/* font-size: 18px; */
@@ -150,7 +150,7 @@ const Container = styled.div`
 	}
 
 	h2 {
-		font-size: 4rem;
+		font-size: 3rem;
 		text-transform: lowercase;
 		letter-spacing: 0.1ch;
 		color: #274c77;

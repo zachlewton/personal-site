@@ -7,26 +7,29 @@ import styled from '@emotion/styled';
 const index = ({ data }, props) => {
 	return (
 		<Layout>
-			<h1>
-				zach <br /> lewton
-			</h1>
+			<IndexContainer>
+				<h1>
+					zach <br /> lewton
+				</h1>
 
-			<ContactContainer>
-				<a href="mailto: zach@zachlewton.dev">zach@zachlewton.dev</a>
-				<a href="https://github.com/zachlewton" target="_blank">
-					github
-				</a>
-				<a
-					href="https://www.linkedin.com/in/zachary-lewton-aa584a1a2/"
-					target="_blank"
-				>
-					LinkedIn
-				</a>
-			</ContactContainer>
+				<ContactContainer>
+					<a href="mailto: zach@zachlewton.dev">zach@zachlewton.dev</a>
+					<a href="https://github.com/zachlewton" target="_blank">
+						github
+					</a>
+					<a
+						href="https://www.linkedin.com/in/zachary-lewton-aa584a1a2/"
+						target="_blank"
+					>
+						LinkedIn
+					</a>
+				</ContactContainer>
 
-			<p style={homeText}>
-				{data.allMarkdownRemark.edges[0].node.frontmatter.description}
-			</p>
+				<p style={homeText}>
+					{data.allMarkdownRemark.edges[0].node.frontmatter.description}
+				</p>
+			</IndexContainer>
+
 			{/* {data.allMarkdownRemark.edges.map(({ node: post }) => (
 				<PostCard to={post.fields.slug}>
 					<h3 className="title">{post.frontmatter.title}</h3>
@@ -46,6 +49,10 @@ const index = ({ data }, props) => {
 // 	justifyContent: 'space-between',
 // 	fontSize: '1rem',
 // };
+
+const IndexContainer = styled.div`
+	padding: 0 0 0 7.5vw;
+`;
 
 const ContactContainer = styled.div`
 	max-width: 700px;

@@ -6,15 +6,30 @@ import { Link } from 'gatsby';
 const WorkCard = (props) => {
 	return (
 		<WorkCardWrapper>
-			<h2>{props.node.title}</h2>
-			<UrlLink href={props.node.url} target="_blank">
-				{props.node.url}
-			</UrlLink>
-			<Desc>{props.node.description}</Desc>
-			<Img fluid={props.node.featured_image.childImageSharp.fluid} />
+			<TextContainer>
+				<h2>{props.node.title}</h2>
+				<UrlLink href={props.node.url} target="_blank">
+					{props.node.url}
+				</UrlLink>
+				<Desc>{props.node.description}</Desc>
+			</TextContainer>
+			<ImageContainer>
+				<Img
+					style={{ width: '100%' }}
+					fluid={props.node.featured_image.childImageSharp.fluid}
+				/>
+			</ImageContainer>
 		</WorkCardWrapper>
 	);
 };
+
+const TextContainer = styled.div`
+	width: 50%;
+`;
+
+const ImageContainer = styled.div`
+	width: 50%;
+`;
 
 const UrlLink = styled.a`
 	opacity: 0.7;
@@ -31,7 +46,12 @@ const Desc = styled.p`
 const WorkCardWrapper = styled.div`
 	margin: 0 0 10vw 0;
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
+	width: 100%;
+
+	/* img {
+		max-width: 50%;
+	} */
 `;
 
 export default WorkCard;
