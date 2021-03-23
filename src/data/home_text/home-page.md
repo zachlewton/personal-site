@@ -1,6 +1,7 @@
 ---
 title: home page
-description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-  eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-  veniam, quis nostrud exercitation.
+description: "brooklyn based front-end web developer and musician with a passion
+  for understanding new technologies and creative problem-solving. loves to
+  build responsive and clean websites. specializes in React, Wordpress, and
+  Gatsby. "
 ---
