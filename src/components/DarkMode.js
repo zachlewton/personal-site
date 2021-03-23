@@ -6,6 +6,8 @@ import styled from '@emotion/styled';
 const DarkMode = () => {
 	if (localStorage) {
 		theme = localStorage.getItem('theme');
+	} else {
+		theme = 'light';
 	}
 	let clickedClass = 'clicked';
 	const body = document.body;
