@@ -4,11 +4,12 @@ import { LightUp } from '@styled-icons/entypo/LightUp';
 import styled from '@emotion/styled';
 
 const DarkMode = () => {
-	if (localStorage) {
-		theme = localStorage.getItem('theme');
-	} else {
-		theme = 'light';
+	if (typeof window !== 'undefined') {
+		if (localStorage) {
+			theme = localStorage.getItem('theme');
+		}
 	}
+
 	let clickedClass = 'clicked';
 	const body = document.body;
 	const lightTheme = 'light';
