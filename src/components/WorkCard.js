@@ -1,11 +1,19 @@
 import React from 'react';
-import styled from '@emotion/styled';
+import styled, { css } from '@emotion/styled';
 import Img from 'gatsby-image';
 import { Link } from 'gatsby';
+import { useBreakpoint } from 'gatsby-plugin-breakpoints';
 
 const WorkCard = (props) => {
+	const breakpoints = useBreakpoint();
+	console.log(breakpoints);
+
 	return (
-		<WorkCardWrapper>
+		<WorkCardWrapper
+			style={
+				breakpoints.xs ? { flexDirection: 'column' } : { flexDirection: 'row' }
+			}
+		>
 			<TextContainer>
 				<h2>{props.node.title}</h2>
 				<UrlLink href={props.node.url} target="_blank">
@@ -13,9 +21,11 @@ const WorkCard = (props) => {
 				</UrlLink>
 				<Desc>{props.node.description}</Desc>
 			</TextContainer>
-			<ImageContainer>
+			<ImageContainer
+				style={breakpoints.xs ? { width: '100%' } : { width: '75%' }}
+			>
 				<Img
-					style={{ width: '100%' }}
+					style={{ width: '100%', border: '2px solid grey' }}
 					fluid={props.node.featured_image.childImageSharp.fluid}
 				/>
 			</ImageContainer>
@@ -25,11 +35,10 @@ const WorkCard = (props) => {
 
 const TextContainer = styled.div`
 	width: 50%;
+	padding: 0 2vw 0 0;
 `;
 
-const ImageContainer = styled.div`
-	width: 50%;
-`;
+const ImageContainer = styled.div``;
 
 const UrlLink = styled.a`
 	opacity: 0.7;
@@ -45,13 +54,10 @@ const Desc = styled.p`
 
 const WorkCardWrapper = styled.div`
 	margin: 0 0 10vw 0;
+	padding: 0 8vw 0 8vw;
 	display: flex;
-	flex-direction: row;
-	width: 100%;
 
-	/* img {
-		max-width: 50%;
-	} */
+	width: 100%;
 `;
 
 export default WorkCard;

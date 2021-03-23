@@ -59,7 +59,7 @@ const ContactContainer = styled.div`
 	width: 30vw;
 	display: flex;
 	font-size: 1rem;
-	padding: 1vw 0 1vw 5vw;
+	padding: 1vw 2vw 1vw 5vw;
 
 	a {
 		margin: 0 2vw 0 0;
@@ -86,9 +86,10 @@ const ContactContainer = styled.div`
 `;
 
 const homeText = {
-	width: '50%',
+	maxWidth: '50%',
 	fontSize: '2rem',
-	maxWidth: '713.812px',
+	minWidth: '350px',
+
 	margin: '0',
 };
 

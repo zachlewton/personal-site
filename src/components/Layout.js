@@ -6,6 +6,7 @@ import { LightUp } from '@styled-icons/entypo/LightUp';
 import { useLocation } from '@reach/router';
 import Helmet from 'react-helmet';
 import styled from '@emotion/styled';
+import DarkMode from './DarkMode';
 
 const Layout = ({ children }) => {
 	// const [theme, toggleTheme] = useState('white');
@@ -44,6 +45,7 @@ const Layout = ({ children }) => {
 			</Helmet>
 			<Container>
 				<nav>
+					<DarkMode />
 					<ul
 						style={
 							breakpoints.xs
@@ -69,11 +71,6 @@ const Layout = ({ children }) => {
 
 				{children}
 			</Container>
-			{!theme ? (
-				<LightButton size="50" onClick={() => toggleTheme(!theme)} />
-			) : (
-				<NightButton size="50" onClick={() => toggleTheme(!theme)} />
-			)}
 
 			{/* <button
 				// onClick={() =>
@@ -93,10 +90,7 @@ const RootWrapper = styled.div`
 	flex-direction: column;
 	min-height: 100vh;
 
-	background: ${({ theme }) => (theme ? 'var(--light)' : 'var(--dark)')};
 	padding: 0 0 3px 0;
-
-	color: ${({ theme }) => (theme ? 'var(--textLight)' : 'var(--textDark)')};
 
 	button {
 		width: 50px;
@@ -112,22 +106,6 @@ const RootWrapper = styled.div`
 	svg {
 		cursor: pointer;
 	}
-`;
-
-const LightButton = styled(LightUp)`
-	align-self: flex-end;
-	padding-left: 1vw;
-	position: fixed;
-	left: 0;
-	top: 0;
-`;
-
-const NightButton = styled(ModeNight)`
-	align-self: flex-end;
-	padding-left: 1vw;
-	position: fixed;
-	left: 0;
-	top: 0;
 `;
 
 const Container = styled.div`
