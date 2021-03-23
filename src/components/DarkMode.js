@@ -11,7 +11,7 @@ const DarkMode = () => {
 	}
 
 	let clickedClass = 'clicked';
-	const body = document.body;
+	const body = typeof window !== 'undefined' ? document.body : null;
 	const lightTheme = 'light';
 	const darkTheme = 'dark';
 	let theme;
