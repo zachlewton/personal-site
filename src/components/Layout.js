@@ -97,13 +97,14 @@ const RootWrapper = styled.div`
 		width: 50px;
 	}
 
-	a {
+	a,
+	a:hover,
+	a:focus,
+	a:active {
 		text-decoration: none;
-	}
-
-	a:visited {
 		color: inherit;
 	}
+
 	svg {
 		cursor: pointer;
 	}
@@ -123,7 +124,7 @@ const Container = styled.div`
 		font-size: 10rem;
 		text-transform: lowercase;
 		letter-spacing: 0.1ch;
-		color: #274c77;
+
 		margin: 0;
 		line-height: 9rem;
 	}
@@ -132,7 +133,7 @@ const Container = styled.div`
 		font-size: 3rem;
 		text-transform: lowercase;
 		letter-spacing: 0.1ch;
-		color: #274c77;
+
 		margin: 0;
 		/* line-height: 9rem; */
 	}

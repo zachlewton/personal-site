@@ -2,10 +2,11 @@
 
 :root {
 	--light: white;
-	--dark: #141414;
+	--dark: #2b2b2b;
 	--textLight: #2b2b2b;
 	--textDark: #dadada;
-	--primaryheading: saddlebrown;
+	--headingLight: #274c77;
+	--headingDark: #8fb0d1;
 }
 
 html {
@@ -22,6 +23,15 @@ body {
 	padding: 0;
 	color: var(--text-color);
 	background-color: var(--background-color);
+
+	h2 {
+		color: var(--heading-color);
+	}
+
+	h1 {
+		color: var(--heading-color);
+	}
+
 	// &.light {
 	// 	--primary: black;
 	// 	--secondary: white;
@@ -36,11 +46,13 @@ body {
 body.light {
 	--background-color: var(--light);
 	--text-color: var(--textLight);
+	--heading-color: var(--headingLight);
 }
 
 body.dark {
 	--background-color: var(--dark);
 	--text-color: var(--textDark);
+	--heading-color: var(--headingDark);
 }
 
 @media only screen and (min-width: 1430px) {
