@@ -7,6 +7,7 @@ import { useLocation } from '@reach/router';
 import Helmet from 'react-helmet';
 import styled from '@emotion/styled';
 import DarkMode from './DarkMode';
+import DarkModeSwitch from './DarkModeSwitch';
 
 const Layout = ({ children }) => {
 	// const [theme, toggleTheme] = useState('white');
@@ -45,7 +46,7 @@ const Layout = ({ children }) => {
 			</Helmet>
 			<Container>
 				<nav>
-					<DarkMode />
+					<DarkModeSwitch />
 					<ul
 						style={
 							breakpoints.xs

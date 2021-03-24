@@ -5,7 +5,7 @@
 	--dark: #141414;
 	--textLight: #2b2b2b;
 	--textDark: #dadada;
-	// --primaryheading: saddlebrown;
+	--primaryheading: saddlebrown;
 }
 
 html {
@@ -20,8 +20,16 @@ html {
 body {
 	margin: 0;
 	padding: 0;
-	background: var(--background-color);
 	color: var(--text-color);
+	background-color: var(--background-color);
+	// &.light {
+	// 	--primary: black;
+	// 	--secondary: white;
+	// }
+	// &.dark {
+	// 	--primary: white;
+	// 	--secondary: black;
+	// }
 	font-family: 'Poppins', sans-serif;
 }
 
