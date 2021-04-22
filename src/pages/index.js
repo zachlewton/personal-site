@@ -13,7 +13,7 @@ const index = ({ data }, props) => {
 				</h1>
 
 				<ContactContainer>
-					<a href="mailto: zach@zachlewton.dev">zach@zachlewton.dev</a>
+					<a href="mailto: zach.g.lewton@gmail.com">zach.g.lewton@gmail.com</a>
 					<a href="https://github.com/zachlewton" target="_blank">
 						github
 					</a>
@@ -29,15 +29,6 @@ const index = ({ data }, props) => {
 					{data.allMarkdownRemark.edges[0].node.frontmatter.description}
 				</p>
 			</IndexContainer>
-
-			{/* {data.allMarkdownRemark.edges.map(({ node: post }) => (
-				<PostCard to={post.fields.slug}>
-					<h3 className="title">{post.frontmatter.title}</h3>
-					<p className="ttr">A lovely {post.timeToRead} minute read</p>
-					<p className="excerpt">{post.excerpt}</p>
-					<p className="date"> {post.frontmatter.date}</p>
-				</PostCard>
-			))} */}
 		</Layout>
 	);
 };
